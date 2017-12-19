@@ -1,0 +1,6 @@
+docker run -d --rm \
+  --name cifar10 \
+  -p 80:80 \
+  --mount type=bind,source=/Users/djustus/Data/cifar10,target=/data \
+  --mount type=volume,source=trainresults,target=/traindir \
+  cifardocker
