@@ -1,6 +1,8 @@
 docker run -d --rm \
   --name cifar10 \
-  -p 80:80 \
-  --mount type=bind,source=/Users/djustus/Data/cifar10,target=/data \
+  -m=10g \
+  -p 6006:6006 \
+  --runtime=nvidia \
+  --mount type=bind,source=$1,target=/data \
   --mount type=volume,source=trainresults,target=/traindir \
   cifardocker
