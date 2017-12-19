@@ -23,6 +23,10 @@ RUN git clone https://github.com/danjust/models
 WORKDIR /model/models/research/slim
 
 
+# port for TensorBoard
+EXPOSE 6006
+
+
 # train model
 CMD python /model/models/research/slim/train_image_classifier.py \
     --train_dir=/traindir \
