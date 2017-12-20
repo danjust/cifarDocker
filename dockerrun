@@ -6,3 +6,5 @@ docker run -d --rm \
   --mount type=bind,source=$1,target=/data \
   --mount type=volume,source=trainresults,target=/traindir \
   cifardocker
+
+docker exec -d cifar10 tensorboard --logdir /traindir
