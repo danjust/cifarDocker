@@ -1,1 +1,5 @@
-.*
+.git*
+Dockerfile
+.ipynb*
+README.md
+.DS_Store
