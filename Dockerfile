@@ -28,7 +28,7 @@ EXPOSE 6006
 
 
 # train model
-CMD python /model/models/research/slim/train_image_classifier.py \
+CMD python /model/models/research/slim/benchmark_train_image_classifier.py \
     --train_dir=/traindir \
     --dataset_dir=/data \
     --dataset_name=cifar10 \
