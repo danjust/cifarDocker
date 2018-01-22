@@ -37,3 +37,4 @@ CMD python /model/models/research/slim/benchmark_train_image_classifier.py \
     --model_name=inception_v3 \
     --benchmark_steps=500 \
     --num_clones=8 \
+    --batch_size=128
