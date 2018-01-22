@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.4.1-gpu
+FROM nvcr.io/nvidia/tensorflow:17.12
 
 
 RUN apt-get update && apt-get install -y \
@@ -34,4 +34,6 @@ CMD python /model/models/research/slim/benchmark_train_image_classifier.py \
     --dataset_name=cifar10 \
     --dataset_split_name=train \
     --clone_on_cpu=False \
-    --model_name=inception_v3
+    --model_name=inception_v3 \
+    --benchmark_steps=500 \
+    --num_clones=8 \
